@@ -6,11 +6,9 @@ def key_for_min_value(name_hash)
   name_hash = {:blake => 500, :ashley => 2, :adam => 1}
 
   def key_for_min_value(name_hash)
-    smallest_name = ""
     smallest = 0
-
     name_hash.collect do |key, value|
-      if smallest >= value || value == 0
+      if smallest >= value || smallest == 0
         smallest = value
         key
       end
